@@ -2,6 +2,11 @@
   command = "npm install && npm run build"
   publish = "dist"
 
+# >>> Add this block <<<
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["pg"]
+
 # Map /api/* → Netlify Functions
 [[redirects]]
   from = "/api/*"
